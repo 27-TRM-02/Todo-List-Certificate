@@ -17,8 +17,8 @@ app.get("/session", (req, res) => {
 app.use(express.static("dist"));
 
 http.createServer(app).listen(80);
-https
-	.createServer(
+https.
+	createServer(
 		{
 			"key": fs.readFileSync("./certs/localhost.pem"),
 			"cert": fs.readFileSync("./certs/localhost.crt"),
@@ -26,5 +26,5 @@ https
 			"rejectUnauthorized": false,
 		},
 		app,
-	)
-	.listen(443);
+	).
+	listen(443);
